@@ -3,8 +3,7 @@
 int main () {
   int a =5;
   int* x = &a;
-  printf ("%p ",x);
-  printf ("%p",&x);
+  printf ("%d\n",*x);
   
   return 0;
 }

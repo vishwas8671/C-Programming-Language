@@ -1,16 +1,20 @@
+// Pass by reference
 #include <stdio.h>
-int main () {
-  int a;
-  printf ("Enter a : ");
-  scanf ("%d",&a);
-  int b;
-  printf ("Enter b : ");
-  scanf ("%d",&b);
+void swap(int* x, int* y) {
   int temp;
-  temp=a;
-  a=b;
-  b=temp;
-  printf ("The value of a is : %d",a);
-  printf ("\nThe value of a is : %d",b);
+  temp = *x;
+  *x = *y;
+  *y = temp;
+  return;
+}
+
+int main () {
+  int a, b;
+  printf ("Enter the values of and b : ");
+  scanf ("%d %d",&a, &b);
+  swap (&a, &b);
+  printf ("The value of a is : %d\n",a);
+  printf ("The value of b is : %d\n",b);
+  
   return 0;
 }
