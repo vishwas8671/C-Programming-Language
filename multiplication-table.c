@@ -1,12 +1,10 @@
 #include <stdio.h>
 int main () {
-  int num;
-  printf ("Enter value : ");
-  scanf ("%d",&num);
-
-  for (int i = 1; i <= 10; i++) {
-    printf ("%d X %d = %d\n", num, i, num*i );
+  int n;
+  printf ("Enter value for printing table : ");
+  scanf ("%d",&n);
+  for (int i=1; i<=10; i++) {
+    printf ("%d X %d = %d\n", n, i, n*i);
   }
-
   return 0;
 }
